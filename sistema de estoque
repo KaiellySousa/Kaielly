@@ -1,0 +1,29 @@
+## Sistema de Estoque básico em java!
+
+public class Estoque {
+  public String item;
+  private int quantidade;
+
+  public Estoque(String item, int quantidade){
+    this.item = item;
+    this.quantidade = quantidade;
+  }
+  public void ExibirEstoque(){
+    System.out.println("Informações do estoque");
+    System.out.println("Item: "+item);
+    System.out.println("Quantidade: "+quantidade);
+  }
+  public void adicionarEstoque(int quantidade){
+    this.quantidade += quantidade;
+    System.out.println("Adicionado ao estoque:"+ quantidade);
+  }
+  public void removerEstoque(int quantidade){
+    if(this.quantidade>=quantidade){
+    this.quantidade -= quantidade;
+    System.out.println("Removido do estoque: "+ quantidade);
+    }
+    else{
+      System.out.println("Não há item suficiente no estoque para remover");
+    }
+  }
+}
