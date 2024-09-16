@@ -1,0 +1,36 @@
+## Cadastro de Curso
+
+Recentemente, fiz um cadastro de curso utilizando a estrutura básica de Programação Orientada a Objetos (POO), pois estou aprendendo sobre esse método.
+
+public class Curso {
+  public String titulo;
+  private int duracaoHoras;
+  private int vagasDisponiveis;
+
+  public Curso(String titulo, int duracaoHoras, int vagasDisponiveis){
+    this.titulo = titulo;
+    this.duracaoHoras = duracaoHoras;
+    this.vagasDisponiveis = vagasDisponiveis;
+  }
+  public void MatricularAluno(int vagas){
+    if(vagasDisponiveis>=vagas){
+      this.vagasDisponiveis-=vagas;
+    System.out.println("Aluno matriculado");
+    }
+    else{
+    System.out.println("Não há vagas");
+    }
+    System.out.println("vagas Disponiveis: "+this.vagasDisponiveis);
+  }
+  public void cancelarMatricula(int vagas){
+    vagasDisponiveis +=vagas;
+    System.out.println("Matricula cancelada");
+    System.out.println("Vagas Disponíveis: "+vagasDisponiveis);
+  }
+  public void exibirInformacoes(){
+    System.out.println("Informações do curso");
+    System.out.println("Titulo: "+titulo);
+    System.out.println("Duração Horas: "+ duracaoHoras);
+    System.out.println("Vagas Disponiveis: "+vagasDisponiveis);
+  }
+}
